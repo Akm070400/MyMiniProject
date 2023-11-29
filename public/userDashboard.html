@@ -1,0 +1,103 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <style>
+    /* Basic Styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+    h1 {
+        color: #212529;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th,
+    td {
+        border: 1px solid #ced4da;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: #212529;
+        color: #ffffff;
+    }
+    button {
+        background-color: #212529;
+        color: #ffffff;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+    }
+    /* Notification Popup Styling */
+    #notificationPopup {
+        display: none;
+        border: 1px solid #333;
+        padding: 10px;
+        background-color: #ffffff;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+    }
+    #OK {
+        background-color: #212529;
+        color: #ffffff;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+  <h1>User Dashboard</h1>
+<button id="logoutBtn">Logout</button>
+<table id="taskTable">
+<thead>
+<tr>
+<th>Title</th>
+<th>Description</th>
+<th>Due Date</th>
+<th>Priority</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody id="taskTableBody"></tbody>
+</table>
+<div>
+<!-- Notification popup -->
+<div id="notificationPopup">
+<h3 id="notificationTitle"></h3>
+<p id="notificationMessage"></p>
+<button id="OK" onclick="closeNotification()">OK</button>
+</div>
+</div>
+<script src="userDashboard.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
